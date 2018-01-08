@@ -1,0 +1,2 @@
+# textarea
+autoHeightTextarea自适应高度的textarea是一款jquery插件，支持链式调用，支持设置最小行数、最小高度、最大行数和最大高度，在输入文字的时候实现textarea的高度自适应。
