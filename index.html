@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自适应高度的textarea</title>
+    <style>
+        body {
+            font: 14px Helvetica Neue,Helvetica,PingFang SC,\5FAE\8F6F\96C5\9ED1,Tahoma,Arial,sans-serif;
+        }
+        .head {
+            line-height: 60px;
+            text-align: center;
+        }
+        .clearfix:before,
+        .clearfix:after {
+            content: '.';
+            display: block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+        .fr {
+            float: right;
+        }
+        textarea {
+            display: block;
+            resize: vertical;
+            padding: 5px 15px;
+            line-height: 1.5;
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 14px;
+            color: #5a5e66;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #d8dce5;
+            border-radius: 4px;
+            transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">自适应高度的textarea（jquery插件）</div>
+    <div class="clearfix">
+        <div class="fr">by
+            <a href="http://www.fxss5201.cn/project/html/textarea/autoHeightTextarea/">樊小书生</a>
+            github: <a href="http://www.fxss5201.cn/project/html/textarea/autoHeightTextarea/"></a>
+        </div>
+    </div>
+    <div>textarea设定值，直接初始化：</div>
+    <textarea name="textarea0" id="textarea0">自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度自适应高度</textarea>
+    <div>什么都不设置，也不传参，初始化：</div>
+    <textarea name="textarea1" id="textarea1"></textarea>
+    <div>textarea上设置rows属性：</div>
+    <textarea name="textarea2" id="textarea2" rows="3"></textarea>
+    <div>初始化设置 rows 参数：</div>
+    <textarea name="textarea3" id="textarea3"></textarea>
+    <div>textarea上设置 data-min-rows 属性：</div>
+    <textarea name="textarea4" id="textarea4" data-min-rows="3"></textarea>
+    <div>初始化设置 minRows 参数：</div>
+    <textarea name="textarea5" id="textarea5"></textarea>
+    <div>textarea上设置 data-max-rows 属性：</div>
+    <textarea name="textarea6" id="textarea6" data-max-rows="3"></textarea>
+    <div>初始化设置 maxRows 参数：</div>
+    <textarea name="textarea7" id="textarea7"></textarea>
+    <div>css设置 min-height：</div>
+    <textarea name="textarea8" id="textarea8" style="min-height: 77px;"></textarea>
+    <div>css设置 max-height：</div>
+    <textarea name="textarea9" id="textarea9" style="max-height: 77px;"></textarea>
+    <div>textarea上设置 data-min-rows 和 data-max-rows 属性：</div>
+    <textarea name="textarea10" id="textarea10" data-min-rows="3" data-max-rows="5"></textarea>
+    <div>初始化设置 minRows 和 maxRows 参数：</div>
+    <textarea name="textarea11" id="textarea11"></textarea>
+    <div>初始化设置 minRows 和 maxRows 参数，当 minRows > maxRows,则以 maxRows 的值设置 minRows 和 maxRows，就比如下面的例子：实际效果是 minRows = 3 和 maxRows = 3：</div>
+    <textarea name="textarea12" id="textarea12"></textarea>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/jquery-autoHeightTextarea.js"></script>
+    <script>
+        $("#textarea0").autoHeightTextarea();
+        $("#textarea1").autoHeightTextarea();
+        $("#textarea2").autoHeightTextarea();
+        $("#textarea3").autoHeightTextarea({
+            rows: 3
+        });$("#textarea4").autoHeightTextarea();
+        $("#textarea5").autoHeightTextarea({
+            minRows: 3
+        });
+        $("#textarea6").autoHeightTextarea();
+        $("#textarea7").autoHeightTextarea({
+            maxRows: 3
+        });
+        $("#textarea8").autoHeightTextarea();
+        $("#textarea9").autoHeightTextarea();
+        $("#textarea10").autoHeightTextarea();
+        $("#textarea11").autoHeightTextarea({
+            minRows: 3,
+            maxRows: 5
+        });
+        $("#textarea12").autoHeightTextarea({
+            minRows: 5,
+            maxRows: 3
+        });
+    </script>
+</body>
+
+</html>
