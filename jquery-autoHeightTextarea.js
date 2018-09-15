@@ -6,7 +6,7 @@
  *              maxRows = Math.min($("textarea").attr("data-max-rows"), maxRows);
  *              如果设置的rows或者代表minRows大于代表maxRows的时候，则以 maxRows 的值设置 minRows 和 maxRows
  * time：2018-01-06
- * by 樊小书生: http: //www.fxss5201.cn/project/html/textarea/autoHeightTextarea/
+ * by 樊小书生: http://www.fxss5201.cn/project/html/textarea/autoHeightTextarea/
  * github: https://github.com/fxss5201/textarea
  */
 ;
