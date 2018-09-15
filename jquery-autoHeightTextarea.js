@@ -15,15 +15,7 @@
         rows: 0,
         minRows: 0,
         maxRows: null,
-        HIDDEN_STYLE: `
-            height:0 !important;
-            visibility:hidden !important;
-            overflow:hidden !important;
-            position:absolute !important;
-            z-index:-1000 !important;
-            top:0 !important;
-            right:0 !important;
-        `,
+        HIDDEN_STYLE: `height:0 !important;visibility:hidden !important;overflow:hidden !important;position:absolute !important;z-index:-1000 !important;top:0 !important;right:0 !important;`,
         CONTEXT_STYLE: [
             'letter-spacing',
             'line-height',
@@ -134,7 +126,7 @@
             // 将得到的height的高度设置到当前的textarea上面
             $(textareaElement).css('height', height + 'px');
         }
-    }
+    };
 
     $.fn.autoHeightTextarea = function(options) {
         var options = $.extend({}, $.fn.autoHeightTextareaDefaults, options);
@@ -165,6 +157,6 @@
             })
         });
         return this;
-    }
+    };
 
 })(jQuery);
